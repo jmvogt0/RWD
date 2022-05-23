@@ -4,7 +4,7 @@ const firstScreen = document.querySelector('.firstScreen');
 const secondScreen = document.querySelector('.secondScreen');
 
 //First Screen
-const headline = firstScreen.querySelector('h1');
+const headline = firstScreen.querySelector('.headlineContainer');
 const firstText = firstScreen.querySelector(".firstText");
 
 //Second Screen

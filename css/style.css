@@ -1,4 +1,8 @@
 /*Variablen*/
+html {
+  background-color: black;
+}
+
 /*Allgemeine Styles*/
 * {
   margin: 0;
@@ -117,6 +121,7 @@ h3 {
 .intro > div {
   height: 100vh;
   position: relative;
+  padding-top: 97px;
 }
 
 .intro video {
@@ -126,13 +131,24 @@ h3 {
      object-fit: cover;
 }
 
-.intro h1 {
+.intro .headlineContainer {
+  width: 100%;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  text-align: center;
   color: white;
+}
+
+.intro .headlineContainer h1 {
+  margin-bottom: 21px;
+}
+
+.intro .headlineContainer p {
+  font-size: 24px;
+  font-weight: 400;
 }
 
 .intro .firstText {
@@ -248,5 +264,15 @@ h3 {
 
 .main .buyNow .textContainer .bottomText :nth-child(1) {
   margin-bottom: 15px;
+}
+
+/*--Footer--*/
+footer {
+  background-color: #272727;
+}
+
+footer p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
 }
 /*# sourceMappingURL=style.css.map */

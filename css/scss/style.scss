@@ -4,11 +4,14 @@ $grey: rgba(255, 255, 255, 0.65);
 $middleGray: rgb(100, 100, 100);
 $darkGrey: rgb(35, 37, 38);
 $textColor: rgb(255, 255, 255);
+$footerColor: #272727;
 
 $buttonBlue: rgb(30, 157, 247);
 
 $topicSpacer: 100px;
-
+html {
+    background-color: black;
+}
 /*Allgemeine Styles*/
 * {
     margin: 0;
@@ -110,18 +113,28 @@ h3 {
     > div {
         height: 100vh;
         position: relative;
+        padding-top: 97px;
     }
     video {
         height: 100%;
         width: 100%;
         object-fit: cover;
     }
-    h1 {
+    .headlineContainer {
+        width: 100%;
         position: absolute;
-        top: 50%;
+        top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
+        text-align: center;
         color: white;
+        h1 {
+            margin-bottom: 21px;
+        }
+        p {
+            font-size: 24px;
+            font-weight: 400;
+        }
     }
     .firstText {
         font-size: 60px;
@@ -217,4 +230,12 @@ h3 {
         
     }
 
+}
+/*--Footer--*/
+footer {
+    background-color: $footerColor;
+    p {
+        font-size: 12px;
+        color: $grey;
+    }
 }
