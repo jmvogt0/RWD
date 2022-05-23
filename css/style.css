@@ -37,6 +37,7 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 0px 7px;
   height: 97px;
 }
 
@@ -94,6 +95,15 @@ h3 {
   border: none;
   font-size: 12px;
   background-color: #1e9df7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*-- Intro Sektion --*/
@@ -134,18 +144,31 @@ h3 {
 
 .main {
   background-color: black;
+  padding: 0px, 7px;
 }
 
 .main p {
   color: white;
 }
 
-.main .spec :nth-child(1) {
+.main .textImage {
+  margin-bottom: 100px;
+}
+
+.main .textImage p {
+  text-align: center;
+}
+
+.main .details {
+  margin-bottom: 100px;
+}
+
+.main .details .spec :nth-child(1) {
   font-size: 40px;
   color: #E67F25;
 }
 
-.main .spec :nth-child(2) {
+.main .details .spec :nth-child(2) {
   font-size: 14px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.65);
