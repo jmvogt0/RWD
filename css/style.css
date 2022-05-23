@@ -20,8 +20,11 @@ h1 {
 }
 
 h3 {
-  font-weight: 700;
   color: white;
+  font-size: 24px;
+  letter-spacing: -.03em;
+  font-weight: 500;
+  margin-bottom: 40px;
 }
 
 /*-- NavBar --*/
@@ -144,7 +147,7 @@ h3 {
 
 .main {
   background-color: black;
-  padding: 0px 7px;
+  padding: 0px 24px;
 }
 
 .main p {
@@ -173,6 +176,23 @@ h3 {
   font-size: 14px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.65);
+}
+
+.main .images {
+  margin: 0 -24px;
+  margin-bottom: 100px;
+}
+
+.main .images h3 {
+  padding: 0 24px;
+}
+
+.main .images p {
+  padding: 0 24px;
+}
+
+.main .images img {
+  width: 100%;
 }
 
 .main .buyNow {
@@ -208,8 +228,17 @@ h3 {
   text-align: center;
 }
 
+.main .buyNow .textContainer .topText :nth-child(1) {
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .main .buyNow .textContainer .bottomText {
   margin-bottom: 45px;
   text-align: center;
+}
+
+.main .buyNow .textContainer .bottomText :nth-child(1) {
+  margin-bottom: 15px;
 }
 /*# sourceMappingURL=style.css.map */
