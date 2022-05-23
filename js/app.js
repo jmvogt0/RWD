@@ -1,11 +1,28 @@
 const intro = document.querySelector('.intro');
-const video = intro.querySelector('video');
-const text = intro.querySelector('h1');
-//END SECTION
-const section = document.querySelector('section');
-const end = section.querySelector('h1');
+const headline = intro.querySelector('h1');
+const firstText = intro.querySelector(".firstText");
 
-ScrollTrigger.create({
+const end = document.querySelector('.end');
+
+let tl = gsap.timeline({scrollTrigger: {
+    trigger: intro,
+    start: "top top",
+    pin: true,
+    scrub: true,
+    markers: true,
+    end: 1200,
+    }}
+    ); //create the timeline
+tl.to(headline, {opacity: 0})
+.from(firstText, {scale: 4}, )
+.to(firstText, {scale: 1});
+
+
+
+
+
+
+/*ScrollTrigger.create({
     trigger: intro,
     start: "top top",
     end: 10000,
@@ -19,9 +36,9 @@ ScrollTrigger.create({
 });
 
 const sndsection = document.querySelector('.sndSection');
-const h2 = sndsection.querySelector('h2');
+const div = sndsection.querySelector('div');
 
-gsap.fromTo(h2, {scale: 5}, {scale: 1, scrollTrigger: 
+gsap.fromTo(div, {scale: 5}, {scale: 1, scrollTrigger: 
     {
     trigger: sndsection,
     start: "top top",
@@ -32,3 +49,4 @@ gsap.fromTo(h2, {scale: 5}, {scale: 1, scrollTrigger:
     }
 });
 
+*/
