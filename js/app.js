@@ -1,6 +1,14 @@
 const intro = document.querySelector('.intro');
-const headline = intro.querySelector('h1');
-const firstText = intro.querySelector(".firstText");
+
+const firstScreen = document.querySelector('.firstScreen');
+const secondScreen = document.querySelector('.secondScreen');
+
+//First Screen
+const headline = firstScreen.querySelector('h1');
+const firstText = firstScreen.querySelector(".firstText");
+
+//Second Screen
+const firstText2 = secondScreen.querySelector(".firstText");
 
 const end = document.querySelector('.end');
 
@@ -10,7 +18,7 @@ let tl = gsap.timeline({scrollTrigger: {
     pin: true,
     scrub: true,
     markers: true,
-    end: 4000,
+    end: 6000,
     }}
     ); //create the timeline
 
@@ -22,38 +30,14 @@ tl.to(headline, {opacity: 0})
 .from(firstText, {opacity: 0}, "<")
 //Ersten textblock auf 1 Skalieren und Opacity hinzufügen
 .to(firstText, {scale: 1})
-.to(firstText, {opacity: 1}, "<");
-
-
-
-
-
-
-/*ScrollTrigger.create({
-    trigger: intro,
-    start: "top top",
-    end: 10000,
-    pin: true,
-    scrub: true,
-    markers: true,
-    //onToggle: , //self => console.log("toggled, isActive:", self.isActive),
-    onUpdate: self => {
-        video.currentTime = self.progress * 10;
-    }
-});
-
-const sndsection = document.querySelector('.sndSection');
-const div = sndsection.querySelector('div');
-
-gsap.fromTo(div, {scale: 5}, {scale: 1, scrollTrigger: 
-    {
-    trigger: sndsection,
-    start: "top top",
-    pin: true,
-    scrub: true,
-    markers: true,
-    end: 12000,
-    }
-});
-
-*/
+.to(firstText, {opacity: 1}, "<")
+.from(firstScreen, {opacity: 1}, "<")
+.to(firstScreen, {opacity: 0, display:"none"})
+.from(secondScreen, {opacity: 0})
+.to(secondScreen, {opacity: 1})
+//
+.from(firstText2, {scale: 4})
+.from(firstText2, {opacity: 0}, "<")
+//Ersten textblock auf 1 Skalieren und Opacity hinzufügen
+.to(firstText2, {scale: 1})
+;
