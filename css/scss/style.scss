@@ -140,6 +140,9 @@ h3 {
         color: white;
     }
     .textImage {
+        img {
+            width: 100%;
+        }
         p {
             font-size: 16px;
             text-align: center;
@@ -167,6 +170,7 @@ h3 {
             padding: 0 24px;
         }
         p {
+            color: $grey;
             padding: 0 24px;
         }
         img {
