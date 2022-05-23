@@ -10,12 +10,19 @@ let tl = gsap.timeline({scrollTrigger: {
     pin: true,
     scrub: true,
     markers: true,
-    end: 1200,
+    end: 4000,
     }}
     ); //create the timeline
+
+//Timeline Punkte hinzufügen
+//Headline ausfaden
 tl.to(headline, {opacity: 0})
-.from(firstText, {scale: 4}, )
-.to(firstText, {scale: 1});
+//From Werte definieren
+.from(firstText, {scale: 4})
+.from(firstText, {opacity: 0}, "<")
+//Ersten textblock auf 1 Skalieren und Opacity hinzufügen
+.to(firstText, {scale: 1})
+.to(firstText, {opacity: 1}, "<");
 
 
 
