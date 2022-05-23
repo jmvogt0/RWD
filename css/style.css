@@ -1,3 +1,4 @@
+/*Variablen*/
 /*Allgemeine Styles*/
 * {
   margin: 0;
@@ -8,6 +9,7 @@
   font-weight: 400;
   font-style: normal;
   font-size: 24px;
+  color: white;
 }
 
 h1 {
@@ -15,6 +17,77 @@ h1 {
   font-weight: 600;
   font-style: normal;
   font-size: 50px;
+}
+
+h3 {
+  font-weight: 700;
+  color: white;
+}
+
+/*-- NavBar --*/
+.navBar {
+  position: fixed;
+  background-color: #232526;
+  width: 100%;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 97px;
+}
+
+.navBar hr {
+  border-color: #646464;
+}
+
+.navBar .upperPart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50%;
+}
+
+.navBar .jumpMarks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50%;
+}
+
+.productName {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.buyButton {
+  width: 94px;
+  height: 28px;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: #1e9df7;
 }
 
 /*-- Intro Sektion --*/
@@ -50,5 +123,24 @@ h1 {
           transform: translate(-50%, -50%);
   color: #E67F25;
   font-size: 50px;
+}
+
+.main {
+  background-color: black;
+}
+
+.main p {
+  color: white;
+}
+
+.main .spec :nth-child(1) {
+  font-size: 40px;
+  color: #E67F25;
+}
+
+.main .spec :nth-child(2) {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
 }
 /*# sourceMappingURL=style.css.map */

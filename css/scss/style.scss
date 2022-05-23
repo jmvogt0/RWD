@@ -1,3 +1,12 @@
+/*Variablen*/
+$orange: #E67F25;
+$grey: rgba(255, 255, 255, 0.65);
+$middleGray: rgb(100, 100, 100);
+$darkGrey: rgb(35, 37, 38);
+$textColor: rgb(255, 255, 255);
+
+$buttonBlue: rgb(30, 157, 247);
+
 /*Allgemeine Styles*/
 * {
     margin: 0;
@@ -8,6 +17,8 @@
     font-style: normal;
 
     font-size: 24px;
+
+    color: $textColor;
 }
 
 h1 {
@@ -15,6 +26,62 @@ h1 {
     font-weight: 600;
     font-style: normal;
     font-size: 50px;
+}
+h3 {
+    font-weight: 700;
+    color: white;
+}
+
+/*-- NavBar --*/
+
+.navBar{
+    position: fixed;
+    background-color: $darkGrey;
+
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 97px;
+
+    hr{
+        border-color: $middleGray;
+    }
+    .upperPart {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        align-items: center;
+
+        height: 50%;
+    }
+    .jumpMarks{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        align-items: center;
+
+        height: 50%;
+    }
+}
+
+.productName {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.buyButton {
+    width:94px;
+    height:28px;
+    border-radius: 4px;
+
+    font-size: 12px;
+
+    background-color: $buttonBlue;
 }
 
 /*-- Intro Sektion --*/
@@ -43,7 +110,24 @@ h1 {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: #E67F25;
+        color: $orange;
         font-size: 50px;
+    }
+}
+.main {
+    background-color: black;
+    p {
+        color: white;
+    }
+    .spec {
+        :nth-child(1){
+            font-size: 40px;
+            color: $orange;
+        }
+        :nth-child(2){
+            font-size: 14px;
+            font-weight: 600;
+            color: $grey;
+        }
     }
 }
