@@ -111,9 +111,12 @@ h3 {
 
 /*-- Intro Sektion --*/
 .intro {
-  padding-top: 97px;
-  height: 100vh;
   background-color: black;
+}
+
+.intro > div {
+  height: 100vh;
+  position: relative;
 }
 
 .intro video {
@@ -125,7 +128,7 @@ h3 {
 
 .intro h1 {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
