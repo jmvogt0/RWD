@@ -86,6 +86,7 @@ h3 {
   width: 94px;
   height: 28px;
   border-radius: 4px;
+  border: none;
   font-size: 12px;
   background-color: #1e9df7;
 }
