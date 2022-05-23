@@ -18,7 +18,7 @@ $topicSpacer: 100px;
     font-weight: 400;
     font-style: normal;
 
-    font-size: 24px;
+    font-size: 16px;
 
     color: $textColor;
 }
@@ -68,8 +68,6 @@ h3 {
         justify-content: space-around;
 
         align-items: center;
-
-        
 
         height: 50%;
         a {
@@ -133,12 +131,13 @@ h3 {
 }
 .main {
     background-color: black;
-    padding: 0px, 7px;
+    padding: 0px 7px;
     p {
         color: white;
     }
     .textImage {
         p {
+            font-size: 16px;
             text-align: center;
         }
         margin-bottom: $topicSpacer;
@@ -156,6 +155,33 @@ h3 {
             }   
         }
         margin-bottom: $topicSpacer;
+    }
+    .buyNow {
+        img {
+            width: 100%;
+        }
+        position: relative;
+        .textContainer {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .topText {
+                margin-top: 37px;
+
+                text-align: center;
+
+            }
+            .bottomText {
+               margin-bottom: 45px; 
+               text-align: center;
+            }
+        }
+        
     }
 
 }

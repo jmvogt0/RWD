@@ -8,7 +8,7 @@
   font-family: open-sans, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 24px;
+  font-size: 16px;
   color: white;
 }
 
@@ -144,7 +144,7 @@ h3 {
 
 .main {
   background-color: black;
-  padding: 0px, 7px;
+  padding: 0px 7px;
 }
 
 .main p {
@@ -156,6 +156,7 @@ h3 {
 }
 
 .main .textImage p {
+  font-size: 16px;
   text-align: center;
 }
 
@@ -172,5 +173,43 @@ h3 {
   font-size: 14px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.65);
+}
+
+.main .buyNow {
+  position: relative;
+}
+
+.main .buyNow img {
+  width: 100%;
+}
+
+.main .buyNow .textContainer {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .buyNow .textContainer .topText {
+  margin-top: 37px;
+  text-align: center;
+}
+
+.main .buyNow .textContainer .bottomText {
+  margin-bottom: 45px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
