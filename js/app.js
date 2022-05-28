@@ -18,7 +18,7 @@ let tl = gsap.timeline({scrollTrigger: {
     pin: true,
     scrub: true,
     markers: true,
-    end: 4000,//4000
+    end: 6000,
     }}
     ); //create the timeline
 
