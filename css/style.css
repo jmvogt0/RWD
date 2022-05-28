@@ -30,6 +30,19 @@ h3 {
   margin-bottom: 40px;
 }
 
+.desktop {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: unset;
+  }
+}
 /*-- NavBar --*/
 .pin-spacer {
   padding: 0 !important;
@@ -89,7 +102,6 @@ h3 {
   background-color: black;
 }
 .container > div {
-  height: 100vh;
   position: relative;
   padding-top: 97px;
 }
@@ -204,9 +216,16 @@ h3 {
   margin-bottom: 15px;
 }
 
+@media screen and (min-width: 1200px) {
+  .main {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
 /*--Footer--*/
 footer {
   background-color: #272727;
+  height: 300px;
 }
 footer p {
   font-size: 12px;

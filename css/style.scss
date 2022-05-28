@@ -9,6 +9,8 @@ $footerColor: #272727;
 $buttonBlue: rgb(30, 157, 247);
 
 $topicSpacer: 100px;
+
+$desktop: 1200px;
 html {
     background-color: black;
 }
@@ -39,6 +41,18 @@ h3 {
     letter-spacing: -.03em;
     font-weight: 500;
     margin-bottom: 40px;
+}
+.desktop {
+    display: none;
+}
+
+@media screen and (min-width: $desktop) {
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: unset;
+    }
 }
 
 /*-- NavBar --*/
@@ -114,7 +128,7 @@ h3 {
     
     background-color: black;
     > div {
-        height: 100vh;
+        //height: 100vh;
         position: relative;
         padding-top: 97px;
     }
@@ -237,9 +251,16 @@ h3 {
     }
 
 }
+@media screen and(min-width: $desktop) {
+    .main {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
 /*--Footer--*/
 footer {
     background-color: $footerColor;
+    height: 300px;
     p {
         font-size: 12px;
         color: $grey;
