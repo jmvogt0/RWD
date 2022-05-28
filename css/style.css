@@ -32,6 +32,10 @@ h3 {
 }
 
 /*-- NavBar --*/
+.pin-spacer {
+  padding: 0 !important;
+}
+
 .navBar {
   position: fixed;
   background-color: #232526;
@@ -113,25 +117,25 @@ h3 {
           align-items: center;
 }
 
-/*-- Intro Sektion --*/
-.intro {
+/*-- Animation Sektion --*/
+.container {
   background-color: black;
 }
 
-.intro > div {
+.container > div {
   height: 100vh;
   position: relative;
   padding-top: 97px;
 }
 
-.intro video {
+.container video {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.intro .headlineContainer {
+.container .headlineContainer {
   width: 100%;
   position: absolute;
   top: 30%;
@@ -142,16 +146,16 @@ h3 {
   color: white;
 }
 
-.intro .headlineContainer h1 {
+.container .headlineContainer h1 {
   margin-bottom: 21px;
 }
 
-.intro .headlineContainer p {
+.container .headlineContainer p {
   font-size: 24px;
   font-weight: 400;
 }
 
-.intro .firstText {
+.container .firstText {
   font-size: 60px;
   color: #E67F25;
   text-align: center;

@@ -1,4 +1,4 @@
-const intro = document.querySelector('.intro');
+const intro = document.querySelector('.container');
 
 const firstScreen = document.querySelector('.firstScreen');
 const secondScreen = document.querySelector('.secondScreen');
@@ -17,8 +17,8 @@ let tl = gsap.timeline({scrollTrigger: {
     start: "top top",
     pin: true,
     scrub: true,
-    //markers: true,
-    end: 6000,
+    markers: true,
+    end: 4000,//4000
     }}
     ); //create the timeline
 

@@ -42,7 +42,9 @@ h3 {
 }
 
 /*-- NavBar --*/
-
+.pin-spacer {
+    padding: 0 !important;
+}
 .navBar{
     position: fixed;
     background-color: $darkGrey;
@@ -105,9 +107,10 @@ h3 {
     align-items: center;
 }
 
-/*-- Intro Sektion --*/
-.intro {
+/*-- Animation Sektion --*/
+.container {
     //padding-top: 97px;
+    //height: 100%;
     
     background-color: black;
     > div {
