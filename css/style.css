@@ -35,29 +35,35 @@ h3 {
   padding: 0 !important;
 }
 
-.desktop {
+#desktop {
   display: none;
 }
 
-@media screen and (min-width: 1200px) {
-  .mobile {
+@media screen and (min-width: 1000px) {
+  #mobile {
     display: none;
   }
 
-  .desktop {
+  #desktop {
     display: unset;
   }
 }
 /*-- NavBar --*/
 .navBar {
   position: fixed;
-  background-color: rgb(35, 37, 38);
-  width: 100%;
+  background-color: rgba(35, 37, 38, 0.9);
   z-index: 1000;
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 0 7px;
   height: 97px;
+}
+@media screen and (min-width: 1000px) {
+  .navBar {
+    flex-direction: row;
+    height: 64px;
+  }
 }
 .navBar hr {
   border-color: rgb(100, 100, 100);
@@ -80,10 +86,31 @@ h3 {
   font-size: 14px;
   text-decoration: none;
 }
+@media screen and (min-width: 1000px) {
+  .navBar .jumpMarks a {
+    margin: 0 20px;
+  }
+}
+.navBar .leftPart {
+  display: flex;
+  align-items: center;
+}
+.navBar .rightPart {
+  display: flex;
+  align-items: center;
+}
+.navBar .desktopContent {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
 
 .productName {
   font-size: 16px;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .buyButton {
@@ -96,6 +123,14 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+}
+@media screen and (min-width: 1000px) {
+  .buyButton {
+    width: 123px;
+    height: 30px;
+    font-size: 14px;
+  }
 }
 
 /*-- Animation Sektion --*/
@@ -138,7 +173,7 @@ h3 {
   color: #E67F25;
   font-size: 50px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .container .firstText {
     font-size: 96px;
   }
@@ -219,7 +254,7 @@ h3 {
   margin-bottom: 15px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .main {
     max-width: 1200px;
     margin: 0 auto;
@@ -236,7 +271,7 @@ footer p {
   color: rgba(255, 255, 255, 0.65);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   footer p {
     max-width: 1200px;
     margin: 0 auto;

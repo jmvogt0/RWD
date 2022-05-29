@@ -2,7 +2,7 @@
 $orange: #E67F25;
 $grey: rgba(255, 255, 255, 0.65);
 $middleGray: rgb(100, 100, 100);
-$darkGrey: rgb(35, 37, 38);
+$darkGrey: rgba(35, 37, 38, 0.9);
 $textColor: rgb(255, 255, 255);
 $footerColor: #272727;
 
@@ -10,7 +10,7 @@ $buttonBlue: rgb(30, 157, 247);
 
 $topicSpacer: 100px;
 
-$desktop: 1200px;
+$desktop: 1000px;
 html {
     background-color: black;
 }
@@ -48,15 +48,15 @@ h3 {
     padding: 0 !important;
 }
 
-.desktop {
+#desktop {
     display: none;
 }
 
 @media screen and (min-width: $desktop) {
-    .mobile {
+    #mobile {
         display: none;
     }
-    .desktop {
+    #desktop {
         display: unset;
     }
 }
@@ -65,9 +65,9 @@ h3 {
 .navBar{
     position: fixed;
     background-color: $darkGrey;
+    z-index: 1000;
 
     width: 100%;
-    z-index: 1000;
 
     display: flex;
     flex-direction: column;
@@ -75,6 +75,10 @@ h3 {
     padding: 0 7px;
 
     height: 97px;
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+        height: 64px;
+    }
 
     hr{
         border-color: $middleGray;
@@ -99,13 +103,34 @@ h3 {
         a {
             font-size: 14px;
             text-decoration: none;
+            @media screen and (min-width: $desktop) {
+                margin: 0 20px;
+            }
         }
     }
+    .leftPart {
+        display: flex;
+        align-items: center;
+    }
+    .rightPart {
+        display: flex;
+        align-items: center;
+    }
+
+    .desktopContent {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+   }
 }
 
 .productName {
     font-size: 16px;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .buyButton {
@@ -122,6 +147,13 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    text-decoration: none;
+    @media screen and (min-width: $desktop){
+        width:123px;
+        height:30px;
+        font-size: 14px;
+    }
 }
 
 /*-- Animation Sektion --*/
