@@ -1,3 +1,3 @@
 # RWD
-# Brandes Geometric Bodies
+# Branded Geometric Bodies
 
