@@ -20,8 +20,9 @@ let tl = gsap.timeline({scrollTrigger: {
     pin: true,
     scrub: true,
     markers: false,
+        //end:4000,
+    end: () => window.innerHeight*3,
     //end: () => window.innerHeight*3,
-end: 4000,
     }}
     ); //create the timeline
 

@@ -32,6 +32,7 @@ h3 {
 
 .pin-spacer {
   height: 450vh !important;
+  padding: 0 !important;
 }
 
 .desktop {
@@ -48,10 +49,6 @@ h3 {
   }
 }
 /*-- NavBar --*/
-.pin-spacer {
-  padding: 0 !important;
-}
-
 .navBar {
   position: fixed;
   background-color: rgb(35, 37, 38);
@@ -149,7 +146,7 @@ h3 {
 
 .main {
   background-color: black;
-  padding: 0 24px;
+  padding: 250vh 0 24px 0;
 }
 .main p {
   color: white;
@@ -226,6 +223,7 @@ h3 {
   .main {
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: unset;
   }
 }
 /*--Footer--*/
