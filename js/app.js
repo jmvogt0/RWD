@@ -3,6 +3,8 @@ const intro = document.querySelector('.container');
 const firstScreen = document.querySelector('.firstScreen');
 const secondScreen = document.querySelector('.secondScreen');
 
+const mainContent = document.querySelector('.main');
+
 //First Screen
 const headline = firstScreen.querySelector('.headlineContainer');
 const firstText = firstScreen.querySelector(".firstText");
@@ -17,10 +19,12 @@ let tl = gsap.timeline({scrollTrigger: {
     start: "top top",
     pin: true,
     scrub: true,
-    //markers: true,
-    end: 6000,
+    markers: false,
+    end: () => window.innerHeight*3,
+
     }}
     ); //create the timeline
+
 
 //Timeline Punkte hinzufügen
 //Headline ausfaden
@@ -32,12 +36,12 @@ tl.to(headline, {opacity: 0})
 .to(firstText, {scale: 1})
 .to(firstText, {opacity: 1}, "<")
 .from(firstScreen, {opacity: 1}, "<")
-.to(firstScreen, {opacity: 0, display:"none"})
-.from(secondScreen, {opacity: 0})
-.to(secondScreen, {opacity: 1})
-//
-.from(firstText2, {scale: 4})
-.from(firstText2, {opacity: 0}, "<")
-//Ersten textblock auf 1 Skalieren und Opacity hinzufügen
-.to(firstText2, {scale: 1})
+.to(firstScreen, {opacity: 0})
+    .to(firstScreen, {display: "none"})
+    .from(secondScreen, {opacity: 0})
+    .to(secondScreen, {opacity: 1})
+    .from(firstText2, {scale: 4})
+    .from(firstText2, {opacity: 0}, "<")
+    //Ersten textblock auf 1 Skalieren und Opacity hinzufügen
+    .to(firstText2, {scale: 1})
 ;

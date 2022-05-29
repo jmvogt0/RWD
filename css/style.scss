@@ -43,7 +43,8 @@ h3 {
     margin-bottom: 40px;
 }
 .pin-spacer {
-    height: 100% !important;
+    //height: 400vh !important;
+    height: 450vh !important;
 }
 
 .desktop {
@@ -128,7 +129,7 @@ h3 {
 /*-- Animation Sektion --*/
 .container {
     //padding-top: 97px;
-    height: 100% !important;
+    height: 100vh !important;
     
     background-color: black;
     .firstScreen, .secondScreen {
