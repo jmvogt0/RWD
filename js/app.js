@@ -21,7 +21,7 @@ let tl = gsap.timeline({scrollTrigger: {
     scrub: true,
     markers: false,
         //end:4000,
-    end: () => window.innerHeight*3,
+    end: () => window.innerHeight*7,
     //end: () => window.innerHeight*3,
     }}
     ); //create the timeline
@@ -34,15 +34,19 @@ tl.to(headline, {opacity: 0})
 .from(firstText, {scale: 4})
 .from(firstText, {opacity: 0}, "<")
 //Ersten textblock auf 1 Skalieren und Opacity hinzufügen
-.to(firstText, {scale: 1})
-.to(firstText, {opacity: 1}, "<")
-.from(firstScreen, {opacity: 1}, "<")
-.to(firstScreen, {opacity: 0})
+.to(firstText, {scale: 0.3})
+.to(firstText, {opacity: -1}, "<")
+
+
+.from(firstScreen, {opacity: 1}, "<<")
+.to(firstScreen, {opacity: 0}, "<<")
     .to(firstScreen, {display: "none"})
-    .from(secondScreen, {opacity: 0})
+    .from(secondScreen, {opacity: 0}, "<")
     .to(secondScreen, {opacity: 1})
     .from(firstText2, {scale: 4})
     .from(firstText2, {opacity: 0}, "<")
-    //Ersten textblock auf 1 Skalieren und Opacity hinzufügen
-    .to(firstText2, {scale: 1})
+    //Zweiten textblock auf 1 Skalieren und Opacity hinzufügen
+    .to(firstText2, {scale: 0.3})
+    .to(firstText2, {opacity: -1}, "<")
+    .to(secondScreen, {opacity: 0})
 ;
