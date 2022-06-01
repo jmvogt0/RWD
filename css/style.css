@@ -182,6 +182,7 @@ h3 {
 .main {
   background-color: black;
   padding: 250vh 0 24px 0;
+  margin: 0 20px;
 }
 .main p {
   color: white;
