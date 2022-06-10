@@ -42,12 +42,6 @@ h3 {
     font-weight: 500;
     margin-bottom: 40px;
 }
-.pin-spacer {
-    //height: 400vh !important;
-    //height: 800vh !important;
-    height: 1300vh !important;
-    padding: 0 !important;
-}
 
 #desktop {
     display: none;
@@ -159,8 +153,7 @@ h3 {
 
 /*-- Animation Sektion --*/
 .container {
-    height: 100vh !important;
-    
+    overflow-x: hidden;
     background-color: black;
     .firstScreen, .secondScreen {
         height: 100vh;
@@ -199,6 +192,10 @@ h3 {
         color: $orange;
         font-size: 50px;
     }
+    .secondScreen .pin-spacer {
+        padding: 0 !important;
+        height: 100vh !important;
+    }
     @media screen and (min-width: $desktop) {
         .firstText {
             font-size: 96px;
@@ -207,8 +204,6 @@ h3 {
 }
 .main {
     background-color: black;
-    //Edit for different screens
-    padding: 250vh 0 24px 0;
     margin: 0 20px;
     p {
         color: white;
@@ -240,6 +235,9 @@ h3 {
     .images {
         margin: 0 -24px;
         margin-bottom: $topicSpacer;
+        .imageContainer {
+            margin-bottom: 100px;
+        }
         h3 {
             padding: 0 24px;
         }
@@ -260,11 +258,20 @@ h3 {
             position: absolute;
             top: 0;
             height: 100%;
-            width: 100%;
+            width:100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            @media screen and (min-width: $desktop){
+                width: fit-content;
+                height: 192px;
+                left: 20%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                align-items: start;
+                justify-content: center;
+            }
             .topText {
                 :nth-child(1){
                     font-size: 30px;
@@ -274,7 +281,20 @@ h3 {
                 margin-top: 37px;
 
                 text-align: center;
+                @media screen and (min-width: $desktop) {
+                    margin-top: 0;
+                    :nth-child(1){
+                        font-size: 40px;
+                        font-weight: 800;
+                    }
+                    p {
+                        font-size: 20px;
+                        font-weight: 600;
+                        text-align: left;
+                        margin-bottom: 10px;
+                    }
 
+                }
             }
             .bottomText {
                 :nth-child(1){
@@ -282,6 +302,14 @@ h3 {
                 }
                margin-bottom: 45px; 
                text-align: center;
+                @media screen and (min-width: $desktop) {
+                    text-align: left;
+                    margin-bottom: 0;
+                    p {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                }
             }
         }
         
@@ -297,18 +325,52 @@ h3 {
 }
 /*--Footer--*/
 footer {
+    padding-top: 20px;
     background-color: $footerColor;
     height: 300px;
     p {
         font-size: 12px;
         color: $grey;
+        margin: 10px 20px auto;
+        text-align: justify;
+    }
+    a {
+        font-size: 12px;
+        color: $textColor;
+        margin-bottom: 10px;
+        text-decoration: none;
+    }
+    .linkBar{
+        padding-top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 20px auto;
     }
 }
 @media screen and(min-width: $desktop) {
     footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         p {
+            width: 100%;
             max-width: 1200px;
-            margin: 0 auto;
         }
+        .linkBar {
+            max-width: 1200px;
+            width: 100%;
+        }
+    }
+}
+
+
+/*--------Content for other Pages-----------*/
+.pageContent {
+    padding-top: 100px;
+    margin: 0 auto;
+    max-width: 1200px;
+    @media screen and("min-width": $desktop) {
+        padding-top: 67px;
     }
 }
