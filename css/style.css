@@ -199,8 +199,13 @@ h3 {
   margin-bottom: 100px;
 }
 .main .details .spec :nth-child(1) {
+  background: linear-gradient(90deg, #d95e00 30%, #ffa353, #d95e00 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   font-size: 40px;
-  color: #E67F25;
+  color: transparent;
 }
 .main .details .spec :nth-child(2) {
   font-size: 14px;
@@ -343,13 +348,30 @@ footer .linkBar {
 /*--------Content for other Pages-----------*/
 .pageContent {
   padding-top: 100px;
-  margin: 0 auto;
   max-width: 1200px;
+  margin: 0 5%;
 }
 @media screen and (min-width: 1000px) {
   .pageContent {
     padding-top: 67px;
   }
+}
+.pageContent .toolContainer, .pageContent .libraryContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  width: 100%;
+}
+@media screen and (min-width: 1000px) {
+  .pageContent .toolContainer, .pageContent .libraryContainer {
+    justify-content: space-between;
+  }
+}
+.pageContent .toolContainer .imgContainer p, .pageContent .libraryContainer .imgContainer p {
+  margin-bottom: 10px;
+}
+.pageContent .toolContainer .imgContainer img, .pageContent .libraryContainer .imgContainer img {
+  width: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

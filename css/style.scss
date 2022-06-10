@@ -221,8 +221,13 @@ h3 {
     .details {
         .spec {
             :nth-child(1){
+                background: linear-gradient(90deg,#d95e00 30%,#ffa353,#d95e00 70%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-box-decoration-break: clone;
+                box-decoration-break: clone;
                 font-size: 40px;
-                color: $orange;
+                color: transparent;
             }
             :nth-child(2){
                 font-size: 14px;
@@ -368,9 +373,30 @@ footer {
 /*--------Content for other Pages-----------*/
 .pageContent {
     padding-top: 100px;
-    margin: 0 auto;
     max-width: 1200px;
+    margin: 0 5%;
     @media screen and("min-width": $desktop) {
         padding-top: 67px;
     }
+    .toolContainer ,.libraryContainer{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        width: 100%;
+
+        @media screen and ("min-width:" $desktop) {
+            justify-content: space-between;
+        }
+        .imgContainer {
+            p {
+                margin-bottom: 10px;
+            }
+            img {
+                width: 100px;
+            }
+        }
+    }
+
+
+
 }
