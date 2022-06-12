@@ -166,7 +166,7 @@ h3 {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #E67F25;
-  font-size: 50px;
+  font-size: 48px;
 }
 .container .secondScreen .pin-spacer {
   padding: 0 !important;
@@ -181,7 +181,6 @@ h3 {
 .main {
   background-color: black;
   margin: 0 20px;
-  padding: 0 20px;
 }
 @media screen and (min-width: 1200px) {
   .main {
@@ -307,16 +306,19 @@ h3 {
 @media screen and (min-width: 760px) {
   .main {
     max-width: 1200px;
-    margin: 0 auto;
     padding-top: unset;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main {
+    margin: 0 auto;
   }
 }
 /*--Footer--*/
 footer {
-  padding-top: 20px;
   background-color: #272727;
   height: 300px;
-  padding: 0 20px;
+  padding: 20px 0 20px 0;
 }
 @media screen and (min-width: 1200px) {
   footer {
