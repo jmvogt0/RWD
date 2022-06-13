@@ -130,7 +130,7 @@ h3 {
 
 /*-- Animation Sektion --*/
 .container {
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: black;
 }
 .container .firstScreen, .container .secondScreen {

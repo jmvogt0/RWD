@@ -81,7 +81,7 @@ let images = document.querySelector('.images');
 let image1 = images.querySelector('.imageContainer1');
 let image2 = images.querySelector('.imageContainer2');
 
-
+/*
 let tl3 = gsap.timeline({scrollTrigger: {
         trigger: image1,
         start: "100 bottom",
@@ -115,4 +115,89 @@ let tl4 = gsap.timeline({scrollTrigger: {
 tl4.from(image2, {scale: 0.7})
     .from(image2, {opacity: 0.7})
     .to(image2, {scale: 1})
-    .to(image2, {opacity: 1});
+    .to(image2, {opacity: 1});*/
+
+
+
+
+//Functions for Image Reveal on Scroll
+
+function animateFrom(elem, direction) {
+    direction = direction || 1;
+    var x = 0,
+        y = direction * 100;
+    if(elem.classList.contains("gs_reveal_fromLeft")) {
+        x = -100;
+        y = 0;
+    } else if (elem.classList.contains("gs_reveal_fromRight")) {
+        x = 100;
+        y = 0;
+    }
+    elem.style.transform = "translate(" + x + "px, " + y + "px)";
+    elem.style.opacity = "0";
+    gsap.fromTo(elem, {x: x, y: y, autoAlpha: 0, scale: 0.5}, {
+        duration: 2.0,
+        x: 0,
+        y: 0,
+        autoAlpha: 1,
+        scale: 1,
+        ease: "expo",
+        overwrite: "auto"
+    });
+}
+
+function hide(elem) {
+    gsap.set(elem, {autoAlpha: 0});
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(".imageContainerElem").forEach(function(elem) {
+        hide(elem); // assure that the element is hidden when scrolled into view
+
+        ScrollTrigger.create({
+            trigger: elem,
+            onEnter: function() { animateFrom(elem) },
+            //onEnterBack: function() { animateFrom(elem, -1) },
+            //onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view
+        });
+    });
+});
+
+//Functions for Text Reveal on Scroll
+
+function animateFromText(elem, direction) {
+    direction = direction || 1;
+    //var x = 0,
+    //    y = direction * 100;
+    //elem.style.transform = "translate(" + x + "px, " + y + "px)";
+    elem.style.opacity = "0";
+    gsap.fromTo(elem, {opacity: 0, autoAlpha: 0}, {
+        duration: 3.5,
+        opacity: 1.0,
+        autoAlpha: 1,
+        ease: "expo",
+        overwrite: "auto"
+    });
+}
+
+function hideText(elem) {
+    gsap.set(elem, {autoAlpha: 0});
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(".textReveal").forEach(function(elem) {
+        hide(elem); // assure that the element is hidden when scrolled into view
+
+        ScrollTrigger.create({
+            trigger: elem,
+            onEnter: function() { animateFromText(elem) },
+            onEnterBack: function() { animateFromText(elem, -1) },
+            onLeave: function() { hideText(elem) } // assure that the element is hidden when scrolled into view
+        });
+    });
+});
+
