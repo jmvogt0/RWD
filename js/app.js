@@ -184,6 +184,7 @@ function animateFromText(elem, direction) {
 
 function hideText(elem) {
     gsap.set(elem, {autoAlpha: 0});
+    gsap.set(elem, {opacity: 0});
 }
 
 document.addEventListener("DOMContentLoaded", function() {
