@@ -49,7 +49,7 @@ const firstText2 = secondScreen.querySelector(".firstText");
 let tl2 = gsap.timeline({scrollTrigger: {
     trigger: secondScreen,
     start: "top top",
-    end: 16000,
+    end: 14000,
     pin: true,
     scrub: true,
     markers: false,
