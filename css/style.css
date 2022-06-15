@@ -322,7 +322,8 @@ h3 {
 /*--Footer--*/
 footer {
   background-color: #272727;
-  height: 200px;
+  height: 100%;
+  min-height: 200px;
   padding: 20px 0 20px 0;
 }
 @media screen and (min-width: 1200px) {
@@ -380,35 +381,82 @@ footer .footerContainer .linkBar {
   }
 }
 /*--------Content for other Pages-----------*/
-.pageContent {
+.webContent {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.webContent .pageContent.noPadding {
+  padding-top: 100px;
+}
+.webContent .pageContent {
   padding-top: 100px;
   max-width: 1200px;
   margin: 0 5%;
 }
 @media screen and (min-width: 760px) {
-  .pageContent {
-    padding-top: 67px;
+  .webContent .pageContent {
+    width: 100%;
+    padding-top: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0;
   }
 }
-.pageContent .toolContainer, .pageContent .libraryContainer {
+@media screen and (min-width: 1200px) {
+  .webContent .pageContent {
+    margin: 0 auto;
+  }
+}
+.webContent .pageContent .toolContainer, .webContent .pageContent .libraryContainer {
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
   width: 100%;
 }
 @media screen and (min-width: 760px) {
-  .pageContent .toolContainer, .pageContent .libraryContainer {
+  .webContent .pageContent .toolContainer, .webContent .pageContent .libraryContainer {
     justify-content: space-between;
   }
 }
-.pageContent .toolContainer .imgContainer p, .pageContent .libraryContainer .imgContainer p {
+@media screen and (min-width: 760px) {
+  .webContent .pageContent .toolContainer > div, .webContent .pageContent .libraryContainer > div {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.webContent .pageContent .toolContainer .imgContainer, .webContent .pageContent .libraryContainer .imgContainer {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.webContent .pageContent .toolContainer .imgContainer p, .webContent .pageContent .libraryContainer .imgContainer p {
   margin-bottom: 10px;
 }
-.pageContent .toolContainer .imgContainer img, .pageContent .libraryContainer .imgContainer img {
+.webContent .pageContent .toolContainer .imgContainer img, .webContent .pageContent .libraryContainer .imgContainer img {
   width: 100px;
 }
-.pageContent .imageShowCase img {
+.webContent .pageContent .libraryContainer img {
+  width: 200px !important;
+}
+.webContent .pageContent .imageShowCase {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.webContent .pageContent .imageShowCase img {
   width: 100%;
+  padding: 2%;
+}
+@media screen and (min-width: 760px) {
+  .webContent .pageContent .imageShowCase img {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

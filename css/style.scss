@@ -343,7 +343,8 @@ h3 {
 /*--Footer--*/
 footer {
     background-color: $footerColor;
-    height: 200px;
+    height: 100%;
+    min-height: 200px;
     padding: 20px 0 20px 0;
     @media screen and ("min-width: 1200px"){
         padding: 0;
@@ -405,36 +406,79 @@ footer {
 
 
 /*--------Content for other Pages-----------*/
-.pageContent {
-    padding-top: 100px;
-    max-width: 1200px;
-    margin: 0 5%;
-    @media screen and("min-width": $desktop) {
-        padding-top: 67px;
+.webContent {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .pageContent.noPadding{
+        padding-top: 100px;
     }
-    .toolContainer ,.libraryContainer{
-        display: flex;
-        justify-content: space-around;
-        margin-top: 30px;
-        width: 100%;
-
-        @media screen and ("min-width:" $desktop) {
-            justify-content: space-between;
+    .pageContent {
+        padding-top: 100px;
+        max-width: 1200px;
+        margin: 0 5%;
+        @media screen and("min-width": $desktop) {
+            width: 100%;
+            padding-top: 15%;
+            padding-left: 5%;
+            padding-right: 5%;
+            margin: 0;
         }
-        .imgContainer {
-            p {
-                margin-bottom: 10px;
+        @media screen and ("min-width: 1200px") {
+            margin: 0 auto;
+        }
+        .toolContainer ,.libraryContainer{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            width: 100%;
+
+            @media screen and ("min-width:" $desktop) {
+                justify-content: space-between;
+            }
+            > div {
+                @media screen and ("min-width:" $desktop) {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                }
+            }
+            .imgContainer {
+                height: 150px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                p {
+                    margin-bottom: 10px;
+                }
+                img {
+                    width: 100px;
+                }
+            }
+        }
+        .libraryContainer{
+            img {
+                width: 200px !important;
+            }
+        }
+        .imageShowCase{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            @media screen and ("min-width:" $desktop){
+
             }
             img {
-                width: 100px;
+                width: 100%;
+                padding: 2%;
+                @media screen and ("min-width:" $desktop){
+                    width: 50%;
+                }
             }
         }
     }
-    .imageShowCase {
-        img {
-            width: 100%;
-        }
-    }
-
-
 }
