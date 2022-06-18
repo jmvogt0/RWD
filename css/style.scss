@@ -257,7 +257,7 @@ h3 {
         @media screen and("min-width: 1200px"){
             margin: 0;
         }
-        .imageContainer:nth-child(odd) {
+        .imageContainer:nth-of-type(even) {
             margin-bottom: 100px;
         }
         h3 {

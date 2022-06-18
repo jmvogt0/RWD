@@ -233,7 +233,7 @@ h3 {
     margin: 0;
   }
 }
-.main .images .imageContainer:nth-child(odd) {
+.main .images .imageContainer:nth-of-type(even) {
   margin-bottom: 100px;
 }
 .main .images h3 {
