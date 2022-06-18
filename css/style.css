@@ -165,8 +165,14 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #E67F25;
   font-size: 48px;
+  width: fit-content;
+  background: linear-gradient(90deg, #d95e00 30%, #ffa353, #d95e00 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  color: transparent;
 }
 .container .secondScreen .pin-spacer {
   padding: 0 !important;
@@ -227,7 +233,7 @@ h3 {
     margin: 0;
   }
 }
-.main .images .imageContainer {
+.main .images .imageContainer:nth-child(odd) {
   margin-bottom: 100px;
 }
 .main .images h3 {
