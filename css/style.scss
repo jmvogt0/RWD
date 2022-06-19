@@ -232,6 +232,17 @@ h3 {
         margin-bottom: $topicSpacer;
     }
     .details {
+        @media screen and("min-width:" $desktop) {
+            .specContainer {
+                display: flex;
+                .specColumn {
+                    width: 50%;
+                }
+            }
+            .spec {
+                margin-bottom: 30px;
+            }
+        }
         .spec {
             :nth-child(1){
                 width: fit-content;
