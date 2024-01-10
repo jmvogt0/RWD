@@ -66,59 +66,10 @@ tl2.from(firstText2, {scale: 4})
 .to(firstText2, {scale: 0.3})
 .to(firstText2, {opacity: -1}, "<");
 
-//.to(firstScreen, {display: "none"})
-//.from(secondScreen, {opacity: 0}, "<")
-//.to(secondScreen, {opacity: 1})
-//.from(firstText2, {scale: 4})
-//.from(firstText2, {opacity: 0}, "<")
-//Zweiten textblock auf 1 Skalieren und Opacity hinzufügen
-//.to(firstText2, {scale: 0.3})
-//.to(firstText2, {opacity: -1}, "<")
-//.to(secondScreen, {opacity: 0})
-
 //Fade-in Animations for Images
 let images = document.querySelector('.images');
 let image1 = images.querySelector('.imageContainer1');
 let image2 = images.querySelector('.imageContainer2');
-
-/*
-let tl3 = gsap.timeline({scrollTrigger: {
-        trigger: image1,
-        start: "100 bottom",
-        pin: false,
-        scrub: true,
-        markers: false,
-        end: "500 bottom",
-        pinSpacing: true,
-        //end: () => window.innerHeight*7,
-        //end: () => window.innerHeight*3,
-    }}
-); //create the timeline
-tl3.from(image1, {scale: 0.7})
-    .from(image1, {opacity: 0.7}, "<")
-    .to(image1, {scale: 1})
-    .to(image1, {opacity: 1}, "<");
-
-
-let tl4 = gsap.timeline({scrollTrigger: {
-        trigger: image2,
-        start: "bottom bottom",
-        pin: false,
-        scrub: true,
-        markers: false,
-        end: "100 100",
-        pinSpacing: true,
-        //end: () => window.innerHeight*7,
-        //end: () => window.innerHeight*3,
-    }}
-); //create the timeline
-tl4.from(image2, {scale: 0.7})
-    .from(image2, {opacity: 0.7})
-    .to(image2, {scale: 1})
-    .to(image2, {opacity: 1});*/
-
-
-
 
 //Functions for Image Reveal on Scroll
 
@@ -154,13 +105,11 @@ document.addEventListener("DOMContentLoaded", function() {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.utils.toArray(".imageContainerElem").forEach(function(elem) {
-        hide(elem); // assure that the element is hidden when scrolled into view
+        hide(elem);
 
         ScrollTrigger.create({
             trigger: elem,
             onEnter: function() { animateFrom(elem) },
-            //onEnterBack: function() { animateFrom(elem, -1) },
-            //onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view
         });
     });
 });
